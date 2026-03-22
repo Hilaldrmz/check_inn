@@ -1,0 +1,52 @@
+/// Extends
+/// Contains extendable classes for quick styling.
+
+%center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+%column-between-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%row-between-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+%hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+%full-size {
+    width: 100%;
+    height: 100%;
+}
+
+%row-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

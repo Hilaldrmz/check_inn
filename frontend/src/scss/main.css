@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+:root {
+  --primary-color: rgba(37, 37, 37, 1);
+  --secondary-color: rgba(196, 156, 116, 1);
+  --tertiary-color: #e20670ff;
+  --quaternary-color: #3a0ca3;
+  --success-color: #4caf50;
+  --danger-color: #f44336;
+  --warning-color: #ff9800;
+  --info-color: #2196f3;
+  --text-color: var(--light-text-color);
+  --bg-color: var(--light-bg-color);
+  --light-text-color: rgba(246, 246, 246, 1);
+  --dark-text-color: #rgba(37, 37, 37, 1);
+  --light-bg-color: #F0EFEF;
+  --dark-bg-color: rgba(29, 29, 29, 1);
+  --light-border-color: #e0e0e0;
+  --dark-border-color: #333333;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: var(--dark-text-color);
+    --bg-color: var(--dark-bg-color);
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (min-width: 0px) {
+  h1 {
+    font-size: 1.875rem;
+  }
+}
+@media (min-width: 576px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+}
+@media (min-width: 992px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 0px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 576px) {
+  h2 {
+    font-size: 1.875rem;
+  }
+}
+@media (min-width: 992px) {
+  h2 {
+    font-size: 2.25rem;
+  }
+}
+p {
+  font-size: 1rem;
+}
+
+@media (min-width: 0px) {
+  p {
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 576px) {
+  p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 992px) {
+  p {
+    font-size: 1.125rem;
+  }
+}
+.u-mb-1 {
+  margin-bottom: 1rem;
+}
+
+.u-p-1 {
+  padding: 1rem;
+}
+
+.button {
+  display: inline-flex;
+  padding: unset;
+  border: unset;
+  font-family: unset;
+  font-size: unset;
+  font-weight: unset;
+  line-height: 1;
+  border-radius: unset;
+  cursor: pointer;
+  transition: 275ms ease;
+  justify-content: center;
+  text-decoration: none;
+  text-transform: unset;
+}
+
+.button[data-type=accent] {
+  color: unset;
+  background-color: unset;
+}
+
+.button[data-type=accent]:is(:hover, :focus) {
+  color: unset;
+  background-color: unset;
+}
+
+.button[data-type=primary] {
+  color: unset;
+  background-color: unset;
+}
+
+.button[data-type=primary]:is(:hover, :focus) {
+  color: unset;
+  background-color: unset;
+}
+
+input,
+.btn,
+.submit {
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 71px;
+  border-radius: 12px;
+  background-color: rgb(37, 37, 37);
+  box-shadow: inset 2px 0 4px rgba(0, 0, 0, 0.25), inset -2px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  color: var(--text-color);
+  outline: none;
+  font-weight: 900;
+}
+
+.submit {
+  align-items: center;
+  width: 190px;
+  height: 67px;
+  background-color: #C49C74;
+  color: var(--primary-color);
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.submit:hover {
+  transform: scale(0.98);
+  box-shadow: inset 2px 0 4px rgba(0, 0, 0, 0.25), inset -2px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+body {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,67 @@
+/// Typography
+/// Defines base typography styles.
+
+@use "../abstracts/breakpoints" as*;
+
+$font-stack: 'Manrope', sans-serif;
+$base-font-size: 16px; // Desktop
+$line-height-ratio: 1.5;
+
+$font-sizes: (
+    "xs": 0.75rem,
+    "sm": 0.875rem,
+    "base": 1rem,
+    "lg": 1.125rem,
+    "xl": 1.25rem,
+    "2xl": 1.5rem,
+    "3xl": 1.875rem,
+    "4xl": 2.25rem,
+    "5xl": 3rem
+);
+
+@mixin responsive-font($size-map, $property: font-size) {
+    @each $breakpoint, $size in $size-map {
+        @media (min-width: $breakpoint) {
+            #{$property}: $size;
+        }
+    }
+}
+
+
+body {
+    font-family: $font-stack;
+    font-size: $base-font-size;
+    line-height: $line-height-ratio;
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+    margin: 0;
+    line-height: $line-height-ratio;
+}
+
+h1 {
+    @include responsive-font((0px: map-get($font-sizes, "3xl"),
+            map-get($breakpoints, "sm"): map-get($font-sizes, "4xl"),
+            map-get($breakpoints, "lg"): map-get($font-sizes, "5xl")));
+}
+
+h2 {
+    @include responsive-font((0px: map-get($font-sizes, "2xl"),
+            map-get($breakpoints, "sm"): map-get($font-sizes, "3xl"),
+            map-get($breakpoints, "lg"): map-get($font-sizes, "4xl")));
+}
+
+p {
+    font-size: map-get($font-sizes, "base");
+    @include responsive-font((0px: map-get($font-sizes, "sm"),
+            map-get($breakpoints, "sm"): map-get($font-sizes, "base"),
+            map-get($breakpoints, "lg"): map-get($font-sizes, "lg")));
+}

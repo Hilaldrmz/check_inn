@@ -1,0 +1,36 @@
+/// Mixins
+/// Reusable mixins for common styling patterns.
+
+// Breakpoint Mixin
+
+@mixin mobile {
+    @media (max-width: map.get($breakpoint, small)) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: map.get($breakpoint, medium)) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: map.get($breakpoint, large)) {
+        @content;
+    }
+}
+
+
+/// Usage
+///     @include mobile {
+///         styles for mobile
+///     }
+
+
+@mixin debug {
+    * {
+        outline: 1px solid rgba(255, 0, 0, 0.694);
+        outline-offset: -1px;
+    }
+}
